@@ -1,0 +1,19 @@
+{
+  "name": "webcomponents",
+  "version": "1.0.0",
+  "description": "\"Aprendiendo a crear componentes web\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexIbar/web-components.git"
+  },
+  "author": "Alex1ibar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexIbar/web-components/issues"
+  },
+  "homepage": "https://github.com/AlexIbar/web-components#readme"
+}

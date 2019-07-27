@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slot </title>
+</head>
+
+<body>
+    <template id="notificacion">
+        <style>
+            .content-notification {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 10px;
+                width: 380px;
+                min-height: 150px;
+                box-shadow: 0px 0px 10px grey;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around
+            }
+
+            .flex-lateral {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+
+            .flex-lateral>* {
+
+                align-self: center;
+            }
+
+            .baner {
+                width: 180px;
+                display: flex;
+                font-size: 22px;
+            }
+
+            .contenido-info {
+                font-size: 20px
+            }
+
+            .links {
+                width: 200px;
+            }
+
+            .links a {
+                text-decoration: none;
+                color: red;
+                font-size: 19px;
+                font-weight: bold
+            }
+        </style>
+        <div class="content-notification">
+            <div class="flex-lateral baner">
+                <slot name="logo">
+                </slot>
+                <slot name="nombre">
+                </slot>
+                <div>
+                    <img width="20px" src="/template/imagenes/up.png" alt="" srcset="">
+                </div>
+            </div>
+            <div class="flex-lateral contenido-info">
+                <div>
+                    <slot name="titulo">
+                    </slot>
+                    <slot name="contenido">
+                    </slot>
+                </div>
+                <slot name="logEmpresa">
+                </slot>
+            </div>
+            <div class="flex-lateral links">
+                <div><a href="#">Watch later</a></div>
+                <div><a href="#">Options</a></div>
+            </div>
+        </div>
+    </template>
+    <notificacion-alert>
+        <div slot="logo">
+            <img width="32px" src="../template/imagenes/youtube.png" alt="" srcset="">
+        </div>
+        <div slot="nombre"><span>YouTube</span></div>
+        <div slot="titulo"><b>Primero</b></div>
+        <div slot="contenido"><i>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae reprehenderit officia porro doloribus cupiditate aliquam vero corporis molestiae qui nesciunt commodi provident, eveniet dolor quisquam voluptate nemo aut animi. Ab?</i></div>
+        <div slot="logEmpresa"><img width="50px" src="../template/imagenes/pepsi-logo-1.png" alt=""></div>
+    </notificacion-alert>
+    <script src="./index.js"></script>
+</body>
+
+</html>

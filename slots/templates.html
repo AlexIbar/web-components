@@ -1,0 +1,80 @@
+<template id="notificacion">
+    <style>
+        .content-notification {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            width: 380px;
+            height: 150px;
+            box-shadow: 0px 0px 10px grey;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around
+        }
+
+        .flex-lateral {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        .flex-lateral>* {
+
+            align-self: center;
+        }
+
+        .baner {
+            width: 180px;
+            display: flex;
+            font-size: 22px;
+        }
+
+        .contenido-info {
+            font-size: 20px
+        }
+
+        .links {
+            width: 200px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: red;
+            font-size: 19px;
+            font-weight: bold
+        }
+    </style>
+    <div class="content-notification">
+        <div class="flex-lateral baner">
+            <slot name="logo">
+                <img width="32px" src="" alt="" srcset="">
+            </slot>
+            <slot name="nombre">
+                <span></span>
+            </slot>
+            <div>
+                <img width="20px" src="./imagenes/up.png" alt="" srcset="">
+            </div>
+        </div>
+        <div class="flex-lateral contenido-info">
+            <div>
+                <slot name="titulo">
+                    <b></b>
+                </slot>
+                <slot name="contenido">
+                    <i></i>
+                </slot>
+            </div>
+            <slot name="logEmpresa">
+                <img width="50px" src="./imagenes/pepsi-logo-1.png" alt="">
+            </slot>
+        </div>
+        <div class="flex-lateral links">
+            <div><a href="#">Watch later</a></div>
+            <div><a href="#">Options</a></div>
+        </div>
+    </div>
+</template>
