@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="259mm"
+   viewBox="0 0 210 259"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="person in restaurant.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:zoom="2"
+     inkscape:cx="690.75"
+     inkscape:cy="450.5"
+     inkscape:window-width="1366"
+     inkscape:window-height="697"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g9707"
+     height="296mm">
+    <sodipodi:guide
+       position="-122.73017,204.95238"
+       orientation="1,0"
+       id="guide8977" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g9707"
+       transform="translate(15.715448,31.430896)">
+      <g
+         id="g9715"
+         transform="matrix(0,4.5133683,-4.5133683,0,202.92918,-37.907991)">
+        <circle
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.965764;stroke-miterlimit:0"
+           id="path846"
+           cx="30.061121"
+           cy="28.196545"
+           r="19.517118" />
+        <g
+           id="g5605"
+           transform="translate(-63.661357,-63.384508)"
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1">
+          <g
+             id="g7163"
+             style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1">
+            <path
+               id="path1257"
+               style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="m 432.87891,300.84766 c -37.78833,0.17675 -88.8708,14.23272 -103.66797,56.38281 l -0.19336,49.4707 c 5.78625,20.74165 20.51613,32.45315 37.51562,42.91602 9.51203,5.43367 32.99376,13.97526 32.15625,5.70312 -59.13327,-27.54913 -63.46475,-140.44146 37.72852,-148.98437 101.19326,8.54291 97.01218,121.43524 37.87891,148.98437 -0.83751,8.27214 22.64423,-0.26945 32.15624,-5.70312 16.99953,-10.46287 31.72936,-22.17437 37.51563,-42.91602 l -0.19531,-49.4707 c -15.27425,-43.50904 -69.21075,-57.08352 -107.2793,-56.35742 -6.4e-4,-2e-5 -0.001,1e-5 -0.002,0 -1.18902,-0.0227 -2.39496,-0.0311 -3.61328,-0.0254 z"
+               transform="matrix(0.26458333,0,0,0.26458333,-21.74921,-10.53)"
+               sodipodi:nodetypes="scccccccccscs" />
+          </g>
+        </g>
+        <g
+           id="g8974"
+           style="fill:#000000;fill-opacity:1"
+           transform="translate(-85.410567,-73.914508)">
+          <path
+             id="path7447"
+             style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 436.41797,287.67383 c -32.47907,0.12018 -54.79637,4.22664 -78.62109,20.18359 -3.12947,2.39302 -1.36271,10.38486 0,9.63281 22.24529,-15.46221 39.96257,-20.2555 78.62109,-19.97461 38.65852,-0.28089 56.37578,4.5124 78.62109,19.97461 1.36271,0.75205 3.12949,-7.23979 0,-9.63281 -23.82474,-15.95695 -46.14202,-20.06341 -78.62109,-20.18359 z"
+             transform="scale(0.26458333)" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
