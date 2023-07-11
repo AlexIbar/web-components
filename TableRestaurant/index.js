@@ -1,31 +1,52 @@
 class TableRestaurant extends HTMLElement {
   type = "circle";
   radio = 40;
-  npersons = 5;
+  npersons = 4;
   anguloSeparacion = 360 / this.npersons;
+  color = "#663300";
+  aumento = 5;
+  mesa = 1;
+  estado = "libre";
+  cuenta = 0;
+  forma_pago = "efectivo";
+
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-    this.render();
+    this.organizarMedidas();
   }
 
+  organizarMedidas(){
+    if(this.npersons <= 7){
+      this.radio = 40;
+      this.aumento = 5;
+    }else if(this.npersons <= 12){
+      this.radio = 62;
+      this.aumento = 16;
+    }else if(this.npersons <= 15){
+      this.radio = 75;
+      this.aumento = 23;
+    }else{
+      this.radio = 100;
+      this.aumento = 35;
+    }
+    this.anguloSeparacion = 360 / this.npersons;
+    this.render();
+  }
   static get observedAttributes() {
-    return ["type", "radio", "npersons"];
+    return ["type", "npersons", "color", "mesa", "estado", "cuenta", "forma_pago"];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === "type") {
-      this.type = newValue;
-      this.render();
-    }
-    if (name === "radio") {
-      this.radio = parseInt(newValue);
-      this.render();
-    }
-    if (name === "npersons") {
-      this.npersons = parseInt(newValue);
-      this.anguloSeparacion = 360 / this.npersons;
-      this.render();
+    switch (name) {
+      case "npersons":
+        this.npersons = parseInt(newValue);
+        this.organizarMedidas();
+        break;
+      default:
+        this[name] = newValue;
+        this.render();
+        break;
     }
   }
 
@@ -37,7 +58,7 @@ class TableRestaurant extends HTMLElement {
       const radianes = (angulo * Math.PI) / 180;
       const x = this.radio * Math.cos(radianes) + this.radio;
       const y = this.radio * Math.sin(radianes) + this.radio;
-      d += `<image href="./person.svg" transform="rotate(${angulo} ${x+medioImagen} ${y+medioImagen})" x="${x+5}" y="${y+5}" width="${radio-10}" height="${radio-10}" />`;
+      d += `<image href="./person.svg" transform="rotate(${angulo} ${x+medioImagen} ${y+medioImagen})" x="${x+this.aumento}" y="${y+this.aumento}" width="30" height="30" />`;
     }
     return d;
   }
@@ -45,15 +66,34 @@ class TableRestaurant extends HTMLElement {
   render() {
     let tam = this.radio * 3;
     this.shadowRoot.innerHTML = /*html*/ `
-            <svg style="border:1px solid red" width="${tam}" height="${tam}">
-                
-                <circle cx="${tam / 2}" cy="${tam / 2}" r="${this.radio-10}" fill="red" />
+            <style>
+              :host{
+                position: relative;
+                display: inline-block;
+              }
+              .element {
+                position: absolute;
+                width: ${tam}px;
+                height: ${tam}px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 6px;
+                text-align: center;
+                color: white
+              }
+            </style>
+            <div class="element">
+              <div>
+                <div><b>Mesa: </b> ${this.mesa}</div>
+                <div><b>Estado: </b> ${this.estado}</div>
+                <div><b>Cuenta: </b> $${this.cuenta}</div>
+                <div><b>Forma de pago: </b> ${this.forma_pago}</div>
+              </div>
+            </div>
+            <svg width="${tam}" height="${tam}">
+                <circle cx="${tam / 2}" cy="${tam / 2}" r="${this.radio-10}" fill="${this.color}" />
                 ${this.renderImage(this.radio)}
-                <text x="${tam / 2}" y="${tam / 2}"
-                    font-family="Verdana"
-                    font-size="5" text-anchor="middle" >
-                Hello, out there
-            </text>
             </svg>
         `;
   }
