@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro"></script>
+    <style>
+        .colorPickerContainer{       
+           padding: 20px 20px 20px 20px;
+           margin-bottom: 0px;
+           background: #FFFFFF 0% 0% no-repeat padding-box;
+           box-shadow: 0px 3px 6px #00000029;
+           border-radius: 10px;
+           opacity: 1;
+           display: none;
+         }
+
+       .colorPickerContainer .grid-container-color {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          grid-gap: 10px;
+        }
+
+ 
+
+      .colorPickerContainer .grid-item-color {
+        cursor: pointer;
+        border: 1px solid #ccc;
+        height: 30px;
+        width: 30px;
+       } 
+
+       .IroWheelBorder{
+          cursor: pointer; 
+       }
+    </style>
+</head>
+<body>
+
+    <color-picker id="my-color">
+        <input type="text" slot="my-input">
+    </color-picker>
+
+    <color-picker id="my-color2">
+        <input type="text" slot="my-input">
+    </color-picker>
+    <script src="./colorPicker.js"></script>
+</body>
+</html>
