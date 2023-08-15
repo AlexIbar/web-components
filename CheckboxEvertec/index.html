@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <checkbox-evertec id="checkPrueba">
+      <input type="checkbox" name="" id="" />
+    </checkbox-evertec>
+    <div class="form-group col-md-3">
+      <label>Suggested Tip 1</label>
+      <div class="input-group">
+        <asp:TextBox
+          ID="tipSuggestion1"
+          CssClass="form-control tip_suggestion"
+          ClientIDMode="Static"
+          runat="server"
+          onkeypress="return isNumberKey(event)"
+        ></asp:TextBox>
+        <span class="input-group-addon tipSymbol">%</span>
+      </div>
+    </div>
+
+    <div class="form-group col-md-3">
+      <label>Suggested Tip 2</label>
+      <div class="input-group">
+        <asp:TextBox
+          ID="tipSuggestion2"
+          CssClass="form-control tip_suggestion"
+          runat="server"
+          onkeypress="return isNumberKey(event)"
+        ></asp:TextBox>
+        <span class="input-group-addon tipSymbol">%</span>
+      </div>
+    </div>
+
+    <div class="form-group col-md-3">
+      <label>Suggested Tip 3</label>
+      <div class="input-group">
+        <asp:TextBox
+          ID="tipSuggestion3"
+          CssClass="form-control tip_suggestion"
+          runat="server"
+          onkeypress="return isNumberKey(event)"
+        ></asp:TextBox>
+        <span class="input-group-addon tipSymbol">%</span>
+      </div>
+    </div>
+
+    <div class="form-group col-md-3">
+      <label>Suggested Tip 4</label>
+      <div class="input-group">
+        <asp:TextBox
+          ID="tipSuggestion4"
+          CssClass="form-control tip_suggestion"
+          runat="server"
+          onkeypress="return isNumberKey(event)"
+        ></asp:TextBox>
+        <span class="input-group-addon tipSymbol">%</span>
+      </div>
+    </div>
+    <script src="./checkbox_evertec.js"></script>
+  </body>
+</html>
